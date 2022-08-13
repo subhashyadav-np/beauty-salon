@@ -1,0 +1,466 @@
+/* ==========================================================================
+  03. PRELOAD SPINNER
+  =========================================================================== */
+
+  #loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  
+  #loader {
+    width: 256px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -128px;
+    margin-top: -19px;
+  }
+  
+  .loader-inner {
+    width: 256px;
+    height: 38px;
+    background: url(../../images/loader.gif) center center no-repeat;  
+  }
+
+
+
+/*Reusable*/
+
+.user-info1{
+    display: flex;
+    flex-direction: column;
+    color: #444;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.flex-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.table-img {
+    height: 50px;
+    overflow: hidden;
+}
+.table-img img {
+    height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .flex-space-between {
+        flex-direction: column;
+    }
+    .table {
+        font-size: 90%;
+    }
+}
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Reusable*/
+
+/* ========== Dashnaord Gallery ================= */
+
+#gallery-3 {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+#gallery-3 .section-title {
+    margin-bottom: 30px;
+}
+
+.gallery-items-list {
+    margin: 0 -10px;
+    padding: 0;
+}
+
+#gallery-1 .gallery-items-list {
+    margin: 0;
+}
+
+/*------------------------------------------*/
+/*    FILTER BUTTONS
+  /*------------------------------------------*/
+
+.gallery-filter button {
+    background-color: transparent;
+    color: #888;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0;
+    margin: 0 30px;
+    padding: 0.5rem 0.1rem;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    outline: 0px none;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*     Filter Button Hover
+  /*------------------------------------------*/
+
+.gallery-filter button:hover,
+.gallery-filter button:focus {
+    background-color: transparent;
+    color: #00a3c8;
+    border-bottom: 2px solid #00a3c8;
+    outline: 0px none;
+}
+
+/*------------------------------------------*/
+/*    Filter Button Active
+  /*------------------------------------------*/
+
+.gallery-filter button.is-checked {
+    color: #00a3c8;
+    cursor: default;
+    border-bottom: 2px solid #00a3c8;
+    outline: 0px none;
+}
+
+.gallery-item {
+    position: relative;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+#gallery-1 .gallery-item {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.masonry-wrap .gallery-item {
+    text-align: center;
+    width: 33.33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------*/
+/*    Image Zoom
+  /*------------------------------------------*/
+
+.image-zoom {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-zoom a {
+    
+    display: inline-block;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+    -webkit-transition: all 450ms ease-in-out;
+    -moz-transition: all 450ms ease-in-out;
+    -o-transition: all 450ms ease-in-out;
+    -ms-transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
+    display: inline-block;
+}
+
+.image-zoom a i{
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+    line-height: 50px !important;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.image-zoom a i:hover {
+    color: rgb(16, 176, 182);
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.image-zoom a:nth-child(2) i:hover {
+    color: #fff;
+    background-color: crimson;
+    border: 2px solid crimson;
+}
+
+/*------------------------------------------*/
+/*    Image Hover Overlay
+  /*------------------------------------------*/
+
+.hover-overlay {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-overlay img {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    overflow: hidden;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -o-transition: transform 400ms;
+    transition: transform 400ms;
+}
+
+/*------------------------------------------*/
+/*    Overlay Background 
+  /*------------------------------------------*/
+
+.item-overlay {
+    opacity: 0;
+    -moz-opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 163, 200, 0.85);
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+
+.item-overlay::before,
+.item-overlay::after {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 450ms ease-in-out;
+    -moz-transition: all 450ms ease-in-out;
+    -o-transition: all 450ms ease-in-out;
+    -ms-transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
+}
+
+.item-overlay::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+.item-overlay::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+
+/*------------------------------------------*/
+/*    Image Hover Effect 
+  /*------------------------------------------*/
+
+.gallery-item:hover img {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+    -moz-opacity: 1;
+}
+
+.gallery-item:hover .item-overlay::before,
+.gallery-item:hover .item-overlay::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.gallery-item:hover a {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+    .gallery-filter {
+        margin-bottom: 40px;
+    }
+
+    #gallery-1 .item-overlay::before,
+    #gallery-2 .item-overlay::before,
+    #gallery-1 .item-overlay::after,
+    #gallery-2 .item-overlay::after {
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    #gallery-1 .image-zoom a,
+    #gallery-2 .image-zoom a {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+        line-height: 42px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+    .gallery-filter button {
+        font-size: 1.15rem;
+    }
+    .masonry-wrap .gallery-item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+    /* Gallery */
+    .gallery-filter {
+        text-align: center !important;
+    }
+    .gallery-filter button {
+        width: 100%;
+        display: block !important;
+        padding: 12px 0;
+        float: none !important;
+        font-size: 1.133rem;
+        margin: 0 0 5px 0;
+        border-bottom: none;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    .gallery-filter button:hover {
+        color: #fff;
+        background-color: #00a3c8;
+        border-bottom: none;
+    }
+    .gallery-filter button.is-checked {
+        color: #fff;
+        background-color: #00a3c8;
+        border-bottom: none;
+    }
+
+    .masonry-wrap .gallery-item {
+        width: 100%;
+    }
+    #gallery-1 .image-zoom a,
+    #gallery-2 .image-zoom a,
+    #gallery-3 .image-zoom a {
+        width: 68px;
+        height: 68px;
+        font-size: 32px;
+        line-height: 64px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .gallery-filter {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    .gallery-filter button {
+        width: 100%;
+        display: block !important;
+        padding: 12px 0;
+        float: none !important;
+        font-size: 1.133rem;
+        margin: 0 0 5px 0;
+        border-bottom: none;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    .gallery-filter button:hover {
+        color: #fff;
+        background-color: #00a3c8;
+        border-bottom: none;
+    }
+    .gallery-filter button.is-checked {
+        color: #fff;
+        background-color: #00a3c8;
+        border-bottom: none;
+    }
+
+    .masonry-wrap .gallery-item {
+        width: 100%;
+        margin: 0 10px 20px;
+        padding: 0 15px;
+    }
+    #gallery-1 .image-zoom a,
+    #gallery-2 .image-zoom a,
+    #gallery-3 .image-zoom a {
+        width: 68px;
+        height: 68px;
+        font-size: 32px;
+        line-height: 64px !important;
+    }
+}
+
+/* ============ Dashnaord Gallery ================ */
+
+/*Dashboard Profile*/
+.profile-div {
+    border: 1px solid #888;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-div label {
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+}
+#label-before {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: rgba(34, 34, 34, 0.5);
+    transition: all linear 0.4s;
+    overflow: hidden;
+}
+.profile-div img {
+    height: 150px;
+    width: 150px;
+}
+/*Dashboard Profile End*/

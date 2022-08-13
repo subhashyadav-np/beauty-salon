@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="btn-arrow" transform="translate(-542 -606)">
+    <g id="border" transform="translate(542 606)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3">
+      <rect width="46" height="46" rx="23" stroke="none"/>
+      <rect x="0.5" y="0.5" width="45" height="45" rx="22.5" fill="none"/>
+    </g>
+    <path id="arrow" d="M141.457,12.583a.781.781,0,0,0-1.1,0l-2.727,2.741V3.781a.781.781,0,0,0-1.562,0V15.326l-2.728-2.741a.781.781,0,0,0-1.107,1.1l4.062,4.082h0a.782.782,0,0,0,1.106,0h0l4.063-4.082A.781.781,0,0,0,141.457,12.583Z" transform="translate(555 765.688) rotate(-90)" fill="#fff"/>
+  </g>
+</svg>

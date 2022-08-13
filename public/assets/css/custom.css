@@ -1,0 +1,34 @@
+.products-img-div{
+    width: 100%; 
+    height:220px; 
+    overflow:hidden; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+}
+
+.products-img-div img{
+    max-width: 100%;
+}
+
+.product-single-img{
+    display: flex; justify-content:center;
+}
+
+.product-cats-img-div{
+    width: 100%; 
+    height:460px; 
+    overflow:hidden;
+}
+
+.product-cats-img-div img{
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .product-cats-img-div{
+        width: 100%; 
+        height:360px; 
+        overflow:hidden;
+    }
+}
